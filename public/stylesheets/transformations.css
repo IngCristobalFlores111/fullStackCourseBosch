@@ -2,6 +2,11 @@ div.square{
     width: 100px;
     height: 100px;
     background: red;
+    transition: all 4s;
+    -webkit-transition: all 4s;
+    -moz-transition: all 4s;
+    -ms-transition: all 4s;
+    -o-transition: all 4s;
 }
 #square1:hover{
     transform: rotate(60deg);
