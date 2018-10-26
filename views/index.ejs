@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/menu.css' />
+    <link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+
+    </head>
+  <body>
+  <ul id="menu-bar">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Products</a>
+   <ul>
+    <li><a href="#">Products Sub Menu 1</a></li>
+    <li><a href="#">Products Sub Menu 2</a></li>
+    <li><a href="#">Products Sub Menu 3</a></li>
+    <li><a href="#">Products Sub Menu 4</a></li>
+   </ul>
+  </li>
+  <li><a href="#">Services</a>
+   <ul>
+    <li><a href="#">Services Sub Menu 1</a></li>
+    <li><a href="#">Services Sub Menu 2</a></li>
+    <li><a href="#">Services Sub Menu 3</a></li>
+    <li><a href="#">Services Sub Menu 4</a></li>
+   </ul>
+  </li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Contact Us</a></li>
+ </ul>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+   <ul>
+   <% for(let i =0;i<5;i++){  %>
+   <li><a href="google.com">Hola</a></li>
+   <% }%>
+   </ul>
+   <h4><%= JSON.stringify(get) %></h4>
+   <form>
+   <input type="text" name="nombre" required>
+   <input type="email" name="email" required>
+  <button>Hola</button>
+   </form>
+   <img  src="https://picsum.photos/200/300/?random" />
+   <table>
+     <thead>
+      <th>Name</th>
+      <th>Email</th>
+     </thead>
+     <tbody>
+  
+    <% var jPeople = JSON.parse(people);
+     for(var i = 0;i<25;i++){
+       var p = jPeople[i];
+
+       %>
+
+       <tr>
+     <td><%= p.name %> </td>
+     <td><%= p.email || "Jesus@gmail.com" %>  </td>
+     </tr>
+     <% }%>
+
+     </tbody>
+   </table>
+   <div class="container">
+     <nav>  
+      <ul>
+    <%   for(var i = 0;i<25;i++){
+      var p = jPeople[i]; if(p.city){ %>
+      <li>
+      <a href=""><%= p.city%></a>
+      </li>
+      <%  }%>
+      <%  }%>
+      </ul>
+      </nav>
+   
+   </div>
+  
+  </body>
+  
+</html>
