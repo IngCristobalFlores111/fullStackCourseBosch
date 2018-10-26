@@ -2,11 +2,12 @@ div.square{
     width: 100px;
     height: 100px;
     background: red;
-    transition: all 4s;
-    -webkit-transition: all 4s;
-    -moz-transition: all 4s;
-    -ms-transition: all 4s;
-    -o-transition: all 4s;
+    transition: all 4s ease-in-out;
+    transition-delay: 1s;
+    -webkit-transition: all 4s ease-in-out;
+    -moz-transition: all 4s ease-in-out;
+    -ms-transition: all 4s ease-in-out;
+    -o-transition: all 4s ease-in-out;
 }
 #square1:hover{
     transform: rotate(60deg);
@@ -14,6 +15,7 @@ div.square{
     -moz-transform:scale(2,1);
     -ms-transform:scale(2,1);
     -o-transform:scale(2,1);
+    background: blue
 }
 #square2:hover{
     transform: scale(2,1);
@@ -27,4 +29,102 @@ div.square{
 }
 #square4:hover{
     transform: skew(20deg);
+}
+div.anim-square{
+    width: 150px;
+    height: 150px;
+    background: yellow;
+    animation:animate-square;
+    -webkit-animation:animate-square;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse
+}
+@keyframes animate-square{
+    0%{
+      background: yellow;
+      transform: rotate(0deg)    ;
+      -webkit-transform: rotate(0deg)    ;
+      -moz-transform: rotate(0deg)    ;
+      -ms-transform: rotate(0deg)    ;
+      -o-transform: rotate(0deg)    ;
+}
+    25%{
+        background: blue;
+        transform: rotate(360deg)    ;
+        -webkit-transform: rotate(360deg)    ;
+        -moz-transform: rotate(360deg)    ;
+        -ms-transform: rotate(360deg)    ;
+        -o-transform: rotate(360deg)    ;
+}
+50%{
+    background: red;
+    transform: rotate(0deg)    ;
+    -webkit-transform: rotate(0deg)    ;
+    -moz-transform: rotate(0deg)    ;
+    -ms-transform: rotate(0deg)    ;
+    -o-transform: rotate(0deg)    ;
+}
+100%{
+    background: purple;
+    transform: rotate(360deg)    ;
+    -webkit-transform: rotate(360deg)    ;
+    -moz-transform: rotate(360deg)    ;
+    -ms-transform: rotate(360deg)    ;
+    -o-transform: rotate(360deg)    ;
+}
+}
+.parent{
+    width: 100%;
+    height: 1000px;
+    position: relative;
+}
+#move{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: red;
+    animation: move-square;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+
+ 
+}
+@keyframes move-square{
+    0%{
+       transform: translate(0,0)    ;
+       -webkit-transform: translate(0,0)    ;
+       -moz-transform: translate(0,0)    ;
+       -ms-transform: translate(0,0)    ;
+       -o-transform: translate(0,0)    ;
+}
+25%{
+    transform: translate(100%,0)    ;
+    -webkit-transform: translate(100%,0)    ;
+    -moz-transform: translate(100%,0)    ;
+    -ms-transform: translate(100%,0)    ;
+    -o-transform: translate(100%,0)    ;
+}
+50%{
+    transform: translate(100%,100%)    ;
+    -webkit-transform: translate(100%,100%)    ;
+    -moz-transform: translate(100%,100%)    ;
+    -ms-transform: translate(100%,100%)    ;
+    -o-transform: translate(100%,100%)    ;
+}
+75%{
+    transform: translate(0,100%)    ;
+    -webkit-transform: translate(0,100%)    ;
+    -moz-transform: translate(0,100%)    ;
+    -ms-transform: translate(0,100%)    ;
+    -o-transform: translate(0,100%)    ;
+}
+100%{
+    transform: translate(0,0)    ;
+    -webkit-transform: translate(0,0)    ;
+    -moz-transform: translate(0,0)    ;
+    -ms-transform: translate(0,0)    ;
+    -o-transform: translate(0,0)    ;
+}
 }
