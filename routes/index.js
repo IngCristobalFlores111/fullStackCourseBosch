@@ -10,4 +10,10 @@ router.get('/', function(req, res, next) {
 router.get("/tranformaciones",(req,res)=>{
   res.render("tranf",{title:"tranformaciones css"});
 });
+router.get("/noresponsivo",(req,res)=>{
+  res.render("noresp",{title:"tranformaciones css"});
+});
+router.get("/responsivo1",(req,res)=>{
+  res.render("resp1",{title:"tranformaciones css"});
+});
 module.exports = router;
