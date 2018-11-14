@@ -205,4 +205,10 @@
         width: 16.66667%;
       }
 }
+.cuadrado{
+  width: 500px;
+  height: 500px;
+  position: relative;
+  background: black;
+}
 

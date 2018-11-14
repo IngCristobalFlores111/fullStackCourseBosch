@@ -16,4 +16,7 @@ router.get("/noresponsivo",(req,res)=>{
 router.get("/responsivo1",(req,res)=>{
   res.render("resp1",{title:"tranformaciones css"});
 });
+router.get("/js1",(req,res)=>{
+  res.render("js1",{title:"js 1"});
+});
 module.exports = router;
